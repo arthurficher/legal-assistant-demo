@@ -1,0 +1,20 @@
+# Trata todos los archivos de texto automáticamente según el sistema operativo
+* text=auto
+
+# Asegura que los archivos de script bash y similares usen LF
+*.sh text eol=lf
+
+# Asegura que los archivos por lotes de Windows usen CRLF
+*.bat text eol=crlf
+
+# Asegura que los archivos de código fuente de C/C++ usen LF
+*.c text eol=lf
+*.h text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+
+# Asegura que los archivos Swift usen LF
+*.swift text eol=lf
+
+# Asegura que los archivos Dart usen LF
+*.dart text eol=lf
