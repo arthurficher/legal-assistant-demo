@@ -37,8 +37,8 @@ Para acceder a la aplicación, usa estas credenciales:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_NUEVO_REPOSITORIO>
-cd flutter_gemini
+git clone https://github.com/arthurficher/legal-assistant-demo.git
+cd legal_assistant_demo
 ```
 
 ### 2. Instalar dependencias
@@ -47,16 +47,25 @@ cd flutter_gemini
 flutter pub get
 ```
 
-### 3. Configurar API Key (Opcional)
+### 3. Configurar API Key (Opcional - NO REQUERIDO)
 
-Si quieres usar Gemini real en lugar del modo mock:
+**IMPORTANTE**: La aplicación funciona perfectamente en modo demo sin API key.
 
-1. Crea un archivo `.env` en la raíz del proyecto:
+Si deseas probar con IA real de Google Gemini:
+
+1. Obtén tu API key gratuita en: https://makersuite.google.com/app/apikey
+
+2. Copia el archivo de ejemplo:
 ```bash
-GEMINI_API_KEY=tu_api_key_aqui
+cp .env.example .env
 ```
 
-2. En `lib/constants.dart`, cambia:
+3. Edita `.env` y reemplaza con tu API key:
+```bash
+GEMINI_API_KEY=tu_api_key_real_aqui
+```
+
+4. En `lib/constants.dart`, cambia:
 ```dart
 static const bool useMockChat = false;
 ```
